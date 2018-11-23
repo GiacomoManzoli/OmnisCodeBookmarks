@@ -1,0 +1,12 @@
+Calculate lnHeight as $cwind.$height
+Calculate lnWidth as $cwind.$width
+Calculate lnTop as $cwind.$top
+Calculate lnLeft as $cwind.$left
+
+Do lrRow.$define()
+Do lrRow.$cols.$add('width',kInteger,k32bitint)
+Do lrRow.$cols.$add('height',kInteger,k32bitint)
+Do lrRow.$cols.$add('left',kInteger,k32bitint)
+Do lrRow.$cols.$add('top',kInteger,k32bitint)
+Do lrRow.$assigncols(lnWidth,lnHeight,lnLeft,lnTop)
+Calculate $cclass.$userinfo as lrRow

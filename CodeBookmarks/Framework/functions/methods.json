@@ -1,0 +1,51 @@
+[
+	{
+		"name": "$splitString",
+		"ident": 0,
+		"order": 1,
+		"notes": ";  Splitta la stringa passata come parametro, separandola nel separatore. Le parti ottenute non hanno il carattere separatore\r;  Es: \"col1,col2,col3\" -> list(\"col1\",\"col2\",\"col3\")",
+		"pvardefs": [
+			{
+				"name": "pcString",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 1,
+				"desc": "Stringa da splittare"
+			},
+			{
+				"name": "pcSeparator",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100,
+				"param": 2,
+				"desc": "Separatore"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lcInput",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lcToken",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lvResultLsit",
+				"order": 5,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	}
+]

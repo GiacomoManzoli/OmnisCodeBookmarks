@@ -1,0 +1,6 @@
+Switch pcEvName
+	Case 'evRemoveBookmark'
+		Do ilBookmarksList.$search($ref.methodNotation=prEvDataRow.methodNotation)
+		Do ilBookmarksList.$remove(kListDeleteSelected)
+		Do ioEventRegistry.$notifyEvent('evBookmarksUpdated')
+End Switch

@@ -1,0 +1,21 @@
+If pnSysKey=kFwdDel
+	Do method removeLine (ilBookmarksList.$line)
+End If
+
+If pnSysKey=kEnter|pnSysKey=kTabKey
+	Do method openBookmark (ilBookmarksList.$line)
+End If
+
+If pnSysKey=kUp
+	Calculate ilBookmarksList.$line as ilBookmarksList.$line+1
+End If
+
+If pnSysKey=kDown
+	Calculate ilBookmarksList.$line as ilBookmarksList.$line+1
+End If
+
+If #COMMAND&(pnKey>=1&pnKey<=9)&pnKey<=ilBookmarksList.$linecount
+	Calculate ilBookmarksList.$line as pnKey
+	Do method openBookmark (pnKey)
+	Do $cfield.$redraw(1,1)
+End If

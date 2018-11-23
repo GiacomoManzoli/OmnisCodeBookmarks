@@ -1,0 +1,2 @@
+Do $windows.Wnd_BookmarsList.$openonce('WndBookmarksPalette') Returns iirBookmakWnd
+Do iirBookmakWnd.$setCallback($cinst().$wndBookmarEvents.$fullname())

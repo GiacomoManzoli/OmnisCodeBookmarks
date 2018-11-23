@@ -1,0 +1,9 @@
+If ilBookmarksList.[pnLine].methodRef.$cando()
+	Do ilBookmarksList.[pnLine].methodRef.$modify()
+Else
+	Do method getDisplayName (ilBookmarksList.[pnLine].methodRef) Returns lcName
+	Yes/No message Bookmarks! (Icon) {The bookmark [lcName] isn't valid. Do you want to clear it?}
+	If flag true
+		Do method removeLine (pnLine,kFalse)
+	End If
+End If

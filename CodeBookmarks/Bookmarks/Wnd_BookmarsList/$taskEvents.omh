@@ -1,0 +1,10 @@
+
+Switch pcEvName
+	Case 'evNewBookmark'
+		Calculate llBookmarksList as $ctask.$getBookmarksList()
+		Do method setBookmarkList (llBookmarksList)
+	Case 'evClearList'
+		Calculate ilBookmarksList.$linecount as 0
+		Do $cinst.$redraw()
+		
+End Switch

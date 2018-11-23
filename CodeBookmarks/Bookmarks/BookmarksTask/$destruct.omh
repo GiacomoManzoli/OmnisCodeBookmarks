@@ -1,0 +1,6 @@
+;  Enter your termination code here
+Do iirMnuBookmark.$close
+If iirBookmakWnd
+	Do iirBookmakWnd.$close()
+End If
+Do method saveState

@@ -1,0 +1,12 @@
+
+;  Do pirMethod.$fullname() Returns %%s
+Calculate %%s as pcMethodNotation
+Calculate %%s as replaceall(%%s,'//','')
+Do code method functions/$splitString (%%s,'.') Returns llPartsList
+
+Calculate lcLibname as llPartsList.3.part
+Calculate lcClassName as llPartsList.5.part
+Calculate lcMethodName as llPartsList.7.part
+
+Calculate lcDisplayName as con(lcLibname,'/',lcClassName,'/',lcMethodName)
+Quit method lcDisplayName

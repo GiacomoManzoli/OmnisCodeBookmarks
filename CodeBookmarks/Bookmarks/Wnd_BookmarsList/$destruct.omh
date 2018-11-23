@@ -1,0 +1,4 @@
+;  Enter your termination code here
+Do $ctask.$removeSubscriber('BookmarkPalette')
+
+Do method saveState

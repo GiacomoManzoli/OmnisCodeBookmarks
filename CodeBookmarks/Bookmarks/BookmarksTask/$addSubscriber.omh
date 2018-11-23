@@ -1,0 +1,1 @@
+Do ioEventRegistry.$addSubscriber(pcSubName,pirRef,pcHandlerName,plEventsList)

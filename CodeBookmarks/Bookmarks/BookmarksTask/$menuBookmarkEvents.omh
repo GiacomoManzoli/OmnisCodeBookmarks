@@ -1,0 +1,23 @@
+Switch pcEvName
+	Case 'evNewBookmark'
+		Do ilBookmarksList.$search($ref.methodNotation=prEvDataRow.methodNotation,1,0,0,0) Returns lnLine
+		If lnLine=0
+			Do ilBookmarksList.$add(prEvDataRow.methodRef,prEvDataRow.methodNotation)
+			;  Breakpoint
+			
+			Do ioEventRegistry.$notifyEvent('evNewBookmark',prEvDataRow)
+			If iirBookmakWnd
+				Do iirBookmakWnd.$bringtofront(kTrue)
+			End If
+		End If
+		
+	Case 'evOpenBookmarkWnd'
+		Do method openBookmarksWindow
+		
+	Case 'evClearList'
+		No/Yes message Bookmark (Icon) {Clear Bookmarks list?}
+		If flag true
+			Do method initBookmarksList
+			Do ioEventRegistry.$notifyEvent('evClearList')
+		End If
+End Switch

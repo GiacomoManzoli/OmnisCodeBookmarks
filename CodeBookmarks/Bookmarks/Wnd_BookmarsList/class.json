@@ -1,0 +1,104 @@
+{
+	"classtype": "kWindow",
+	"internalversion": 3,
+	"superclass": "Wnd_Base",
+	"designtaskname": "BookmarksTask",
+	"nextident": 1020,
+	"lastgroupident": 0,
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "ilBookmarksList",
+			"order": 1,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		}
+	],
+	"properties": {
+		"aligntogrid": false,
+		"alpha": 255,
+		"backcolor": "kColor3DFace",
+		"backgroundskin": 0,
+		"backgroundskinalign": "kPALtopLeft",
+		"backgroundtheme": "kBGThemeWindow",
+		"backpattern": 0,
+		"bringinfront": true,
+		"clickbehind": true,
+		"closebox": true,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"contextmenu": "",
+		"createdate": "2018-11-23 07:44:24",
+		"desc": "",
+		"dockingedge": "kBorderChisel",
+		"dropmode": "kAcceptNone",
+		"edgefloat": "kEFnone",
+		"editor": "",
+		"editordata": "",
+		"effect": "kBorderNone",
+		"enablemenuandtoolbars": true,
+		"external": true,
+		"forecolor": "kColor3DFace",
+		"growbox": true,
+		"hasmenus": false,
+		"hasstatusbar": false,
+		"height": 138,
+		"helpbutton": false,
+		"helpfile": 0,
+		"horzgrid": 8,
+		"horzscroll": false,
+		"inheritedorder": 1,
+		"issubwindow": false,
+		"issupercomponent": false,
+		"keepclicks": true,
+		"left": 140,
+		"menuedge": "kBorderChisel",
+		"menunames": "",
+		"minimizebox": false,
+		"minimizeiconid": 2006,
+		"moddate": "2018-11-23 07:45:34",
+		"modelessdata": true,
+		"showascheckedout": false,
+		"showcommands": false,
+		"showgrid": false,
+		"showtitle": false,
+		"sizetogrid": false,
+		"startfield": 0,
+		"statusbarpos": "kSBPosBottom",
+		"statusedge": "kBorderChisel",
+		"style": "kTitle",
+		"title": {
+			"type": 0,
+			"calc": "Bookmarks"
+		},
+		"toolbarnames": "",
+		"toolbaroptions": "kTBOptionNone",
+		"toolbarpos": "kDockingAreaNone",
+		"top": 302,
+		"userinfo": {
+			"type": 29,
+			"subtype": 1,
+			"data": {
+				"$base64": "ggEAIAAAASMAAAE6AAAAAwAAAAH/////AAAAAQAAATqBAAAaAAAAiwAAAIsAAAEDAAAAAACLAAAAAIIBACAAAAAgAAAAcQAAAAMAAAAEO5rKAAAAAAAAAABxAAAAAAEA4AIAE2QAGgAAgQV3aWR0aAACIeACABRkABoAAIEGaGVpZ2h0AAIh4AIAEmQAGgAAgQRsZWZ0AAIh4AIAEWQAGgAAgQN0b3AAAiHgAAAABAACAABIRUlHSFQAAAAAAAAAAAAAAAAAAAAAAAAAAAACTEVGVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1RPUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARXSURUSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAEA4AIAEHEB8HEBEHECbHEDLeA="
+			}
+		},
+		"usesheets": false,
+		"version": "",
+		"vertgrid": 8,
+		"vertscroll": false,
+		"width": 438,
+		"zoombox": false
+	},
+	"statusbar": {
+		"properties": {
+			"fieldstyle": "",
+			"font": 1,
+			"fontsize": 0,
+			"helppane": 0
+		}
+	}
+}

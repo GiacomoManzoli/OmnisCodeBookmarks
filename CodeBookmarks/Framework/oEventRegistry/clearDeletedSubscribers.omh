@@ -1,0 +1,7 @@
+;  Descrizione: Esegue una pulizia dei subscriber, cancellando tutti quelli marcati come rimossi
+;  Data: 2018.05.04 - Autore: Giacomo Manzoli
+;
+Do iListSubscribers.$search(not(isnull($ref.name)),kTrue,kFalse,kTrue,kTrue)
+Do iListSubscribers.$remove(kListKeepSelected)
+
+Quit method

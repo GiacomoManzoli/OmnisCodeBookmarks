@@ -1,0 +1,5 @@
+;  [GM] Aggiunto un metodo che verifica che l'oggetto usato sia correttamente inizializzato.
+;  Questo errore mi ha fatto diventare matto un sacco di volte!
+If not(ib_initialized)
+	Breakpoint {Oggetto non inizializzato}
+End If

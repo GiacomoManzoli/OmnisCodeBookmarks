@@ -1,0 +1,12 @@
+Set reference lirCurrentMethod to sys(237)
+If lirCurrentMethod
+	Calculate %%notation as lirCurrentMethod.$fullname()
+	
+	Do lrEvDataRow.$define()
+	Do lrEvDataRow.$cols.$add('methodRef',kItemref)
+	Do lrEvDataRow.$cols.$add('methodNotation',kCharacter,kSimplechar)
+	
+	Set reference lrEvDataRow.methodRef to lirCurrentMethod
+	Calculate lrEvDataRow.methodNotation as %%notation
+	Do $cinst.$_notifyEvent('evNewBookmark',lrEvDataRow)
+End If

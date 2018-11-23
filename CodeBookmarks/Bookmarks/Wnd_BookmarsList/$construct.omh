@@ -1,0 +1,8 @@
+;  Enter your initialization code here
+Do inherited
+Do method loadState
+
+Calculate llEvlist as $ctask.$getEvents()
+Do $ctask.$addSubscriber('BookmarkPalette',$cinst().$ref,'$taskEvents',llEvlist)
+Calculate llBookmarksList as $ctask.$getBookmarksList()
+Do method setBookmarkList (llBookmarksList)

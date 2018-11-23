@@ -1,0 +1,3 @@
+Do ilBookmarksList.$define()
+Do ilBookmarksList.$cols.$add('methodRef',kItemref)
+Do ilBookmarksList.$cols.$add('methodNotation',kCharacter,kSimplechar)

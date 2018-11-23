@@ -1,0 +1,61 @@
+{
+	"classtype": "kTask",
+	"internalversion": 3,
+	"tvardefs": [
+
+	],
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "iirBookmakWnd",
+			"order": 4,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iirMnuBookmark",
+			"order": 1,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ilBookmarksList",
+			"order": 2,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ioEventRegistry",
+			"order": 3,
+			"type": "kObject",
+			"subtype": "oEventRegistry",
+			"sublen": 0
+		}
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2018-11-23 07:44:24",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"moddate": "2018-11-23 07:45:34",
+		"showascheckedout": false,
+		"userinfo": {
+			"type": 29,
+			"subtype": 0,
+			"data": {
+				"$base64": "ggEAIAAAANQAAAPDAAAAAwAAAAU7msoAAAAABgAAA8OBAAAaAAAAdAAAAHQAAAC0AAAAAAB0AAAAAIIBACAAAAAgAAAAWgAAAAMAAAACO5rKAAAAAAAAAABaAAAAAAEA4AIAF2QAIQAAgQltZXRob2RSZWYAAiHgAgAcZAAV//+BDm1ldGhvZE5vdGF0aW9uAAIh4AAAAAIAAgAATUVUSE9ETk9UQVRJT04AAAAAAAAAAAAAAAAAAk1FVEhPRFJFRgAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAQDgAgGZkj9+AAcIPAhEKQxERVZUT09MU19BRFYIbSkUU3Vid19QZXJmb3JtYW5jZUxpc3QImSkOJGN0eE1lbnVFdmVudHOBUiRyb290LiRsaWJzLkRFVlRPT0xTX0FEVi4kd2luZG93cy5TdWJ3X1BlcmZvcm1hbmNlTGlzdC4kbWV0aG9kcy4vLyRjdHhNZW51RXZlbnRzLy/gAgGRkjt+AAcIPAhEKQxERVZUT09MU19BRFYIbSkUU3Vid19QZXJmb3JtYW5jZUxpc3QImSkKJHNldFBhcmFtc4FOJHJvb3QuJGxpYnMuREVWVE9PTFNfQURWLiR3aW5kb3dzLlN1YndfUGVyZm9ybWFuY2VMaXN0LiRtZXRob2RzLi8vJHNldFBhcmFtcy8v4AIBqJJHfgAJCDwIRCkMREVWVE9PTFNfQURWCG0pEFduZF9Cb29rbWFyc0xpc3QIlykLbGJCb29rbWFya3MImSkLaGFuZGxlRXZLZXmBWSRyb290LiRsaWJzLkRFVlRPT0xTX0FEVi4kd2luZG93cy5XbmRfQm9va21hcnNMaXN0LiRvYmpzLmxiQm9va21hcmtzLiRtZXRob2RzLmhhbmRsZUV2S2V54AIBh5I2fgAHCDwIRCkMREVWVE9PTFNfQURWCG0pEFduZF9Cb29rbWFyc0xpc3QImSkJJGRlc3RydWN0gUkkcm9vdC4kbGlicy5ERVZUT09MU19BRFYuJHdpbmRvd3MuV25kX0Jvb2ttYXJzTGlzdC4kbWV0aG9kcy4vLyRkZXN0cnVjdC8v4AIBj5I8fgAHCDwIRCkMREVWVE9PTFNfQURWCG0pEFduZF9Cb29rbWFyc0xpc3QImSkPc2V0Qm9va21hcmtMaXN0gUskcm9vdC4kbGlicy5ERVZUT09MU19BRFYuJHdpbmRvd3MuV25kX0Jvb2ttYXJzTGlzdC4kbWV0aG9kcy5zZXRCb29rbWFya0xpc3Tg"
+			}
+		},
+		"version": ""
+	}
+}

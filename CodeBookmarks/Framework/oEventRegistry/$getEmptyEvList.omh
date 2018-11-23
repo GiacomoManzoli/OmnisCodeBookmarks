@@ -1,0 +1,4 @@
+;  Descrizione: Ritorna una lista pronta per essere popolata con i nomi degli eventi
+;  Data: 2018.04.13 - Autore: Giacomo Manzoli
+Do evList.$define(evName)
+Quit method evList

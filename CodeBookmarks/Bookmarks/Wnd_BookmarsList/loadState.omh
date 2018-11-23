@@ -1,0 +1,7 @@
+Calculate lrRow as $cclass.$userinfo
+If lrRow.$colcount>0
+	Calculate $cwind.$height as lrRow.height
+	Calculate $cwind.$width as lrRow.width
+	Calculate $cwind.$top as lrRow.top
+	Calculate $cwind.$left as lrRow.left
+End If

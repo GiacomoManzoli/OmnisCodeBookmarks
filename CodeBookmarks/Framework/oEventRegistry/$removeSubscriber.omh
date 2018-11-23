@@ -1,0 +1,21 @@
+;  Descrizione: Cerca il nome nella lista e lo rimuove
+;  Data: 2018.04.10 - Autore: Giacomo Manzoli
+;  Modifiche:
+;  - 2018.05.04 GM: Aggiunta gestione rimozione subscriber durante la propagazione di un evento
+;
+Do method checkInit
+Calculate lv_prevLine as iListSubscribers.$line     ;; 2018.06.18 GM: Salvo la linea corrente! sennò posso incorrere in loop infiniti
+Do iListSubscribers.$search($ref.name=pName,kTrue,kFalse,kFalse,kFalse) Returns found
+If found
+	If iNotifyingEvent=''
+		Do iListSubscribers.$remove(found)
+	Else
+		;  Se sto notificando un evento post-pongo il delete, per evitare di rimuovere elementi dalla lista mentre la scorro
+		Calculate iListSubscribers.name as #NULL
+	End If
+End If
+
+If lv_prevLine<>0
+	Calculate iListSubscribers.$line as lv_prevLine
+End If
+Quit method

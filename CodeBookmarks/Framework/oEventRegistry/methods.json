@@ -1,0 +1,333 @@
+[
+	{
+		"name": "*** READ ME ***",
+		"ident": 7,
+		"order": 1,
+		"notes": "LEGGIMI!",
+		"pvardefs": [
+			{
+				"name": "pEventName",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000,
+				"param": 1,
+				"desc": "Nome dell'evento che si è verificato"
+			},
+			{
+				"name": "pData",
+				"order": 5,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 2
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "evData",
+				"order": 3,
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "eventList",
+				"order": 1,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "evName",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000
+			}
+		]
+	},
+	{
+		"name": "$construct",
+		"ident": 1,
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"ident": 2,
+		"order": 3,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$init",
+		"ident": 9,
+		"order": 4,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "initSubscribersList",
+		"ident": 0,
+		"order": 5,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "events",
+				"order": 3,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0,
+				"desc": "Eventi d'interesse"
+			},
+			{
+				"name": "handler",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000,
+				"desc": "Nome del metodo handler"
+			},
+			{
+				"name": "name",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000,
+				"desc": "Nome del subscriber"
+			},
+			{
+				"name": "reference",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"desc": "Riferimento al subscriber"
+			}
+		]
+	},
+	{
+		"name": "checkInit",
+		"ident": 11,
+		"order": 6,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "--- register ---",
+		"ident": 6,
+		"order": 7,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$getEmptyEvList",
+		"ident": 10,
+		"order": 8,
+		"notes": "Descrizione: Ritorna una lista pronta per essere popolata con i nomi degli eventi. Ha una sola colonna \"evName\" (Char-1000)\r",
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "evList",
+				"order": 2,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "evName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000
+			}
+		]
+	},
+	{
+		"name": "$addSubscriber",
+		"ident": 3,
+		"order": 9,
+		"notes": "Aggiunge al registro il subscriber da notifcare degli eventi specificati come parametro\r",
+		"pvardefs": [
+			{
+				"name": "pName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000,
+				"param": 1,
+				"desc": "Nome del subscriber"
+			},
+			{
+				"name": "pRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 2,
+				"desc": "Item Reference per invocare il metodo gestore dell'evento"
+			},
+			{
+				"name": "pHandler",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000,
+				"param": 3,
+				"desc": "Nome del metodo gestore degli eventi"
+			},
+			{
+				"name": "pListEvent",
+				"order": 3,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0,
+				"param": 4,
+				"desc": "Lista di eventi da notificare (ha una sola colonna 'evName')"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$removeSubscriber",
+		"ident": 5,
+		"order": 10,
+		"notes": "Rimuove dalla lista di subscriber quello passato come parametro. In caso di omonimia viene eliminato il primo subscriber trovato.\r",
+		"pvardefs": [
+			{
+				"name": "pName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000,
+				"param": 1,
+				"desc": "Nome del subscriber da rimuovere"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "found",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			},
+			{
+				"name": "lv_prevLine",
+				"order": 3,
+				"type": "kNumber",
+				"subtype": "k0dp",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "clearDeletedSubscribers",
+		"ident": 12,
+		"order": 11,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "--- triggering ---",
+		"ident": 8,
+		"order": 12,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$notifyEvent",
+		"ident": 4,
+		"order": 13,
+		"notes": "Pubblica l'evento pEvName associandoci i dati pEvData\r",
+		"pvardefs": [
+			{
+				"name": "pEvName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000,
+				"param": 1,
+				"desc": "Nome dell'evento da notificare"
+			},
+			{
+				"name": "pEvData",
+				"order": 3,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 2,
+				"desc": "Dati da associare all'evento (idealmente una row)"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "found",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			},
+			{
+				"name": "handlerName",
+				"order": 5,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000
+			},
+			{
+				"name": "lbOK",
+				"order": 6,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			},
+			{
+				"name": "lData",
+				"order": 4,
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	}
+]

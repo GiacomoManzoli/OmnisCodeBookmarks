@@ -1,0 +1,6 @@
+Calculate llEventsList as ioEventRegistry.$getEmptyEvList()
+
+Do llEventsList.$add('evNewBookmark')
+Do llEventsList.$add('evClearList')
+Do llEventsList.$add('evBookmarksUpdated')
+Quit method llEventsList

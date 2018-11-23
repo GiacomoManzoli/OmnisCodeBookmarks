@@ -1,0 +1,35 @@
+;  Descrizione: Notifica l'evento pEvName a tutti i subscriber interessati usando i dati presenti in pEvData.
+;  Parametri:
+;  - pEvName: Nome dell'evento da notificare
+;  - pEvData: FiledRef (idealmente ad una row) con i dati da passare ai subscriber
+;  Modifiche:
+;  - 2018.05.04 GM: Aggiunta gestione rimozione subscriber durante la propagazione di un evento
+;
+Do method checkInit
+Calculate iNotifyingEvent as pEvName
+
+Calculate lData as pEvData
+
+For iListSubscribers.$line from 1 to iListSubscribers.$linecount step 1
+	;  Per ogni subscriber cerca se l'evento corrente è interessante
+	Do iListSubscribers.events.$search($ref.evName=pEvName,kTrue,kFalse,kFalse,kFalse) Returns found
+	If found
+		If not(isnull(iListSubscribers.name))     ;; Se non è ancora stato rimosso (vedi $removeSubscriber)
+			;  Se l'evento corrente è interessante, invoca il metodo
+			Calculate handlerName as iListSubscribers.handler
+			If iListSubscribers.reference.[handlerName].$cando()
+				Do iListSubscribers.reference.[handlerName](pEvName,lData)
+				
+				;  2018.06.09 GM: Controllo che la lista esista ancora
+				If isnull(iListSubscribers)
+					Quit method
+				End If
+			Else
+				Breakpoint {Metodo non eseguibile}
+			End If
+		End If
+	End If
+End For
+
+Calculate iNotifyingEvent as ''
+Do method clearDeletedSubscribers

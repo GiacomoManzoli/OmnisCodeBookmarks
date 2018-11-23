@@ -1,0 +1,7 @@
+On evClick     ;; Event Parameters - pRow ( Itemreference )
+	
+On evDoubleClick     ;; Event Parameters - pRow ( Itemreference )
+	Do method openBookmark (pLineNumber)
+	
+On evKey
+	Do method handleEvKey (pSystemKey,pKey)

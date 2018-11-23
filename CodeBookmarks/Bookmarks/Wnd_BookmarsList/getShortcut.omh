@@ -1,0 +1,9 @@
+Calculate lcPlatform as sys(6)
+
+If lcPlatform='X'
+	Calculate lcShortcut as con('⌘ + ',pnLine)
+Else
+	Calculate lcShortcut as con('Ctrl + ',pnLine)
+End If
+
+Quit method lcShortcut

@@ -1,0 +1,12 @@
+;  Enter your initialization code here
+
+Calculate $cinst().$name as 'Bookmark'
+
+Do ioEventRegistry.$init()
+Do method initBookmarksList
+Do method loadState
+
+Do $menus.mnu_Bookmark.$open('mnuBoookmark') Returns iirMnuBookmark
+Do iirMnuBookmark.$setCallback($cinst().$menuBookmarkEvents.$fullname())
+
+Do method openBookmarksWindow

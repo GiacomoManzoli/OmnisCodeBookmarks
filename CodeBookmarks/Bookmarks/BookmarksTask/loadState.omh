@@ -1,0 +1,10 @@
+Calculate ilBookmarksList as $cclass.$userinfo
+
+For ilBookmarksList.$line from 1 to ilBookmarksList.$linecount step 1
+	If ilBookmarksList.methodRef
+		Calculate ilBookmarksList.$selected as kTrue
+	End If
+End For
+Do ilBookmarksList.$remove(kListKeepSelected)
+
+Do ioEventRegistry.$notifyEvent('evBookmarksUpdated')

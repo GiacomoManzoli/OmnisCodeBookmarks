@@ -1,0 +1,11 @@
+;  Splitta la stringa passata come parametro, separandola nel separatore. Le parti ottenute non hanno il carattere separatore
+;  Es: "col1,col2,col3" -> list("col1","col2","col3")
+
+Calculate lcInput as pcString
+Do lvResultLsit.$cols.$add('part',kCharacter,kSimplechar,100000)
+While len(lcInput)
+	Calculate lcToken as strtok('lcInput',pcSeparator)     ;; 'lcToken' deve matchare con il nome della variabile.
+	Do lvResultLsit.$add(lcToken)
+End While
+;  Breakpoint
+Quit method lvResultLsit

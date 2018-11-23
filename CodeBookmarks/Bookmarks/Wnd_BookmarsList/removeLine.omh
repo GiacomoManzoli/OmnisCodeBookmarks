@@ -1,0 +1,19 @@
+If pbAskPermission
+	No/Yes message Watch out! (Icon) {Are you sure to delete the bookmark?}
+Else
+	Calculate #F as kTrue
+End If
+If flag true
+	Do lrEvDataRow.$define()
+	Do lrEvDataRow.$cols.$add('methodRef',kItemref)
+	Do lrEvDataRow.$cols.$add('methodNotation',kCharacter,kSimplechar)
+	If ilBookmarksList.[pnLine].methodRef.$cando()
+		Set reference lrEvDataRow.methodRef to ilBookmarksList.[pnLine].methodRef
+	End If
+	Calculate lrEvDataRow.methodNotation as ilBookmarksList.[pnLine].methodNotation
+	Do $cinst.$_notifyEvent('evRemoveBookmark',lrEvDataRow)
+	
+	Do ilBookmarksList.[pnLine].$selected.$assign(kTrue)
+	Do ilBookmarksList.$remove(kListDeleteSelected)
+	Do $cinst.$redraw(1,1)
+End If

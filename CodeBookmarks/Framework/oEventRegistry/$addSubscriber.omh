@@ -1,0 +1,3 @@
+;  Aggiunge l'elemento alla lista dei riferimenti da notificare
+Do method checkInit
+Do iListSubscribers.$add(pName,pRef.$ref,pHandler,pListEvent)

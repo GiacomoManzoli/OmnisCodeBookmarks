@@ -1,0 +1,42 @@
+;  Autore: Giacomo Manzoli
+;  Data: 2018.04.10 - Ultimo aggiornamento: 2018.05.04 - Modifica rimozione subscriber
+;
+;  Descrizione: Oggetto che permette la propagazione di eventi senza l'utilizzo di riferimenti diretti
+;
+;  Per registrarsi agli eventi gli oggetti devono chiamare il metodo:
+;
+;  Do refEventRegistry.$addSubscriber(pSubscriberName,pRef, pHandlerName,pEventList)
+;
+;  Dove:
+;  - 'pSubscriberName' è una stringa che identifica l'oggetto (serve per il $removeSubscriber)
+;  - 'pRef' è il riferimento all'oggetto che deve essere notificato dell'evento, tipicamente è $cinst
+;  - 'pHandlerName' nome del metodo da chiamare quando si verifica l'evento
+;  - 'pEventList' lista con una sola colonna, 'evName', che specifica quali eventi devono essere notificati.
+;
+;  Da notare che una volta registrato, l'oggetto deve rimuoversi prima della distruzione!
+
+
+;  Esempio di utilizzo:
+;  Do eventList.$define(evName)
+;  Do eventList.$add('evEvent2')
+;  Do iRefMainObject.$registerSubscriber(iInstanceName,$cinst,'$handleEvents',eventList)
+
+;  metodo $handleEvents dello stesso oggetto:
+;
+;  * pEvent Char 1000
+;  * pData FieldRef
+;  Switch pEventName
+;  Case 'evEvent2'
+;  Calculate evData as pData
+;  Do iList.$add(con('Evento 2: (counter: ',evData.C1,')'))
+;  End Switch
+;  Do iRefHlEventi.$redraw(kTrue,kTrue)
+;
+;
+;
+;  MODIFICA RIMOZIONE SUBSCRIBER (2018.05.04)
+;  Si sono verificate delle situazioni in cui la lista dei subscriber viene modificata durante la propagazione di un evento.
+;  Per gestire questa situazione è stata modifica la rimozione di un elemento, che se avviene durante la propagazione di un evento
+;  questa viene posticipata alla fine della propagazione, in modo da non alterare la lista durante la sua navigazione
+;  Anziché rimuovere gli i subscriber è stata quindi adottata la tecnica di marcare il subscriber come rimosso e successivamente rimuoverlo
+;  una volta che la propavazione è terminata. Un subscriber marcato come rimosso (nome uguale a #NULL) non viene più notificato degli eventi.

@@ -1,0 +1,12 @@
+Do ilBookmarksList.$define()
+Do ilBookmarksList.$cols.$add('methodRef',kItemref)
+Do ilBookmarksList.$cols.$add('methodNotation',kCharacter,kSimplechar)
+Do ilBookmarksList.$cols.$add('displayName',kCharacter,kSimplechar)
+Do ilBookmarksList.$cols.$add('shortcut',kCharacter,kSimplechar)
+Do ilBookmarksList.$merge(plBookmarkList,kFalse)
+For ilBookmarksList.$line from 1 to ilBookmarksList.$linecount step 1
+	Do method getDisplayName (ilBookmarksList.methodNotation) Returns ilBookmarksList.displayName
+	Do method getShortcut (ilBookmarksList.$line) Returns ilBookmarksList.shortcut
+End For
+Do $cinst.$redraw(1,1)
+;  Breakpoint
